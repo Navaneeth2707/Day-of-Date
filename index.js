@@ -1,6 +1,9 @@
 import express from "express";//importing express from npm
 import bodyParser from "body-parser";//importing bodyparser from npm
 import { fileLoader } from "ejs";
+
+
+
 //----------------------------------------------------------------------
 const app=express();
 var data= "Your responce will be here";
