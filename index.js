@@ -16,20 +16,15 @@ function date(req, res, next) {
  let date = req.body.date; //req.body.-->>get data from ejs
   let month = req.body.month;
   let year = req.body.year;
-  let a = parseInt(date); //convert string in to int
-  let b = parseInt(month);
-  let c = parseInt(year);
-  if (a >= 1 && a <= 31 && b >= 1 && b <= 12 && c >= 1111 && c <= 9999) {
+ 
+
   var aa=month+' '+date+' '+year;
   const valentines = new Date(aa);
 const day = valentines.getDay();
 
 data=dayNames[day];
 
-  }
-  else{
-    data="Enter valid date";
-  }
+
     next();
   }
   //it is a middleware
