@@ -1,6 +1,6 @@
 import express from "express";//importing express from npm
 import bodyParser from "body-parser";//importing bodyparser from npm
-import { fileLoader } from "ejs";
+// import { fileLoader } from "ejs";
 //----------------------------------------------------------------------
 const app=express();
 var data= "Your responce will be here";
@@ -19,13 +19,13 @@ function date(req, res, next) {
  
 
   var aa=month+' '+date+' '+year;
-  const valentines = new Date(aa);
-const day = valentines.getDay();
+  const value = new Date(aa);
+const day = value.getDay();
 
 data=dayNames[day];
 
 
-    next();
+next();
   }
   //it is a middleware
  //-----------------------------------------------------------------------
@@ -36,6 +36,7 @@ app.get("/",(req,res)=>{
 }) 
   app.use(date);
   //get method
+
 //----------------------------------------------------------------------
  app.post("/login",(req,res)=>
  {
